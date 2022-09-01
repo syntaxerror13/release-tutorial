@@ -1,0 +1,22 @@
+# Commands and commit references to copy during the live tutorial
+
+Upload with twine:
+python3 -m twine upload --repository testpypi dist/*
+
+Set up Python:
+actions/setup-python@c4e89fac7e8767b327bbad6cb4d859eda999cf08
+
+Checkout:
+actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
+
+Store build artifacts:
+actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8
+
+Download artifacts from "build-artifacts":
+actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741
+
+Publish binary wheel and source tarball on PyPI:
+pypa/gh-action-pypi-publish@717ba43cfbb0387f6ce311b169a825772f54d295
+
+testpypi URL:
+https://test.pypi.org/legacy/

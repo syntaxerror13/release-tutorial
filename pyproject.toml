@@ -1,0 +1,22 @@
+# We chose "hatchling" as our build system of choice as it supports reproducible
+# builds and is recommended by the "Packaging Python Projects" tutorial by PyPA.
+[build-system]
+# We pin the hatchling version for reproducibility reasons.
+requires = ["hatchling==1.8.0"]
+build-backend = "hatchling.build"
+
+# Specify which files and directories should be included in the build artifacts.
+# This is done to prevent adding unnecessary files to the releases.
+[tool.hatch.build.targets.sdist]
+include = [ "/src", "/requirements-build.txt" ]
+
+[project]
+name = "example_package_YOUR_USERNAME_HERE"
+version = "0.0.1"
+description = "Package created during OSS Europe 2022 tutorial"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
