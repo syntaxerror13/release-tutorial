@@ -13,3 +13,15 @@ jobs:
         uses: actions/setup-python@c4e89fac7e8767b327bbad6cb4d859eda999cf08
         with:
           python-version: '3.9'
+      
+      - name: Checkout
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
+      
+      - name: Install build dependencies
+        run: python3 -m pip install -r requirements-build.txt
+    
+      - name: Build
+        run: python3 -m build
+    
+      - name: List 256 shasum
+        run: shasum -a 256 dist/*
