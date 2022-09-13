@@ -11,7 +11,7 @@ build-backend = "hatchling.build"
 include = [ "/src", "/requirements-build.txt" ]
 
 [project]
-name = "example_package_YOUR_USERNAME_HERE"
+name = "tutorial_syntaxerror_oss_2022"
 version = "0.0.1"
 description = "Package created during OSS Europe 2022 tutorial"
 readme = "README.md"
